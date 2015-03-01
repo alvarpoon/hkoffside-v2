@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Insert Alert</title>
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="tiny_mce_popup.js"></script>
+<script language="javascript" type="text/javascript" src="shcodes.js"></script>
+
+<style>
+#button-dialog div{ padding: 5px 0; height: 20px;}
+#button-dialog label { display: block; float: left; margin: 0 8px 0 0; width: 80px; }
+#button-dialog select, #button-dialog input { display: block; float: right; width: 100px; padding: 3px 5px;}
+#button-dialog select { width: 112px; }
+#button-dialog #insert-btn { display: block; line-height: 24px; text-align: center; margin: 10px 0 0 0; float: right;}
+body{font-family:"Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;background:#f1f1f1;font-size:13px;color:#666;margin:0;padding:0;}
+#button-dialog{display:none;}
+#button-dialog.active{display:block;}
+#wrap-shortcodes{float:left;clear:both;margin-top:0;background:#fff;width:100%;max-width:600px;padding:10px 20px;}
+.sections{width:300px;background:#f6f6f6;border-radius:3px;float:left;clear:both;padding:10px;}
+#tab{float:left;background:#f4f4f4;margin:10px 0 0;padding:0 0 0 10px;}
+#tab li{float:left;list-style:none;padding-bottom:10px;border-bottom:1px solid #ccc;margin:15px 0 0;}
+#tab li:hover a{color:#666;}
+#tab li a{border-bottom:0;text-decoration:none;color:#999;padding:10px 12px;}
+#tab li a.active{border:1px solid #ccc;border-bottom:1px solid #fff!important;background:#fff;color:#333;text-decoration:none;padding:10px 12px;}
+#insert-btn{color:#333;border:1px solid #bbb;text-decoration:none;font-weight:bold;font-size:11px;width:94px;height:25px;clear:both;cursor:pointer;-webkit-border-radius:3px;border-radius:3px;background-color:#eee;background-image:linear-gradient(bottom,#ddd,#fff);margin:0;padding:0 0 1px;}
+#insert-btn:hover{border:1px solid #555;}
+</style>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#tab a').click(function(ev) {
+        ev.preventDefault();
+        var el = jQuery(this),
+            target = this.id;
+        if (el.hasClass('active')) {
+            return;
+        }
+        jQuery('#tab a').removeClass('active');
+        el.addClass('active');
+        jQuery('.sections>div').hide();
+        jQuery('.sections .dph-' + target).fadeIn('fast');
+    });
+});
+</script>
+
+</head>
+<body>
+
+<ul id='tab'>
+    <li><a href='#' class="active" id="tab1">Alerts</a></li>
+    <li><a href='#' id="tab2">Accordion</a></li>
+    <li><a href='#' id="tab3">Buttons</a></li>
+    <li><a href='#' id="tab4">Labels</a></li>
+    <li><a href='#' id="tab5">Maps</a></li>
+    <li><a href='#' id="tab6">Progress Bar</a></li>
+    <li><a href='#' id="tab7">Pull-Quote</a></li>
+    <li><a href='#' id="tab8">Tabs</a></li>
+    <li><a href='#' id="tab9">Video</a></li>
+</ul>
+
+<div id="wrap-shortcodes">
+
+<div class="sections">
+
+	<!-- ============================= Alert Shortcode =============================  -->
+	<div id="button-dialog" class="dph-tab1 active">
+		<form action="/" method="get" accept-charset="utf-8">
+			<div>
+				<label for="alert-style">Style</label>
+				<select name="alert-style" id="alert-style" size="1">
+					<option value="warning" selected="selected">Warning (Yellow)</option>
+					<option value="danger">Error (Red)</option>
+					<option value="success">Success (Green)</option>
+					<option value="info">Info (Blue)</option>
+				</select>
+			</div>
+			<div>	
+				<a href="javascript:AlertDialog.insert(AlertDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+		<!-- ============================= Accordion Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab2">
+		<form action="/" method="get" accept-charset="utf-8">
+			<div>
+				<label for="button-size">Number of Sections</label>
+				<select name="button-size" id="option-text" size="1">
+					<option value="span1" id="op1" selected="selected">One</option>
+					<option value="span2" id="op2">Two</option>
+					<option value="span3" id="op3">Three</option>
+					<option value="span4" id="op4">Four</option>
+					<option value="span5" id="op5">Five</option>
+				</select>
+			</div>
+			<div>	
+				<a href="javascript:AccordionDialog.insert(AccordionDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+
+	<!-- ============================= Button Shortcode =============================  -->
+	<div id="button-dialog" class="dph-tab3">
+		<form action="/" method="get" accept-charset="utf-8">
+			<div>
+				<label for="button-url">Button URL</label>
+				<input type="text" name="button-url" value="" id="button-url" />
+			</div>
+			<div>
+				<label for="button-text">Button Text</label>
+				<input type="text" name="button-text" value="" id="button-text" />
+			</div>
+			<div>
+				<label for="button-size">Size</label>
+				<select name="button-size" id="button-size" size="1">
+					<option value="lg">Large</option>
+					<option value="default" selected="selected">Medium</option>
+					<option value="sm">Small</option>
+					<option value="xs">Mini</option>
+				</select>
+			</div>
+			<div>
+				<label for="button-color">Color</label>
+				<select name="button-color" id="button-color" size="1">
+					<option value="grey" selected="selected">Silver</option>
+					<option value="primary">Blue</option>
+					<option value="info">Cyan</option>
+					<option value="success">Green</option>
+					<option value="warning">Orange</option>
+					<option value="danger">Red</option>
+				</select>
+			</div>
+			<div>
+				<label for="button-classi">CSS Custom Class</label>
+				<input type="text" name="button-text" value="margot_btn" id="button-classi" />
+			</div>
+			<div>	
+				<a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+	<!-- ============================= Labels Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab4">
+		<form action="javascript:LabelsDialog.insert(LabelsDialog.local_ed)" method="get" accept-charset="utf-8">
+			<div>
+				<label for="label-text">Label Text</label>
+				<input type="text" name="label-text" value="" id="label-text" />
+			</div>
+			<div>
+				<label for="label-style">Style</label>
+				<select name="label-style" id="label-style" size="1">
+					<option value="default" selected="selected">Silver</option>
+					<option value="success">Green</option>
+					<option value="warning">Orange</option>
+					<option value="important">Red</option>
+					<option value="info">Blue</option>
+				</select>
+			</div>
+			<div>	
+				<a href="javascript:LabelsDialog.insert(LabelsDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+	<!-- ============================= Maps Shortcode =============================  -->
+	<div id="button-dialog" class="dph-tab5">
+		<form action="javascript:MapDialog.insert(MapDialog.local_ed)" method="get" accept-charset="utf-8">
+			<div>
+				<label for="info-url">Map URL</label>
+				<input type="text" name="info-url" value="http://" id="info-url" />
+			</div>
+			<div>
+				<label for="info-width">Width (percentage)</label>
+				<input type="text" name="info-width" value="100%" id="info-width" />
+			</div>
+			
+			<div>
+				<label for="info-height">Height</label>
+				<input type="text" name="info-width" value="320px" id="info-height" />
+			</div>
+			<div>	
+				<a href="javascript:MapDialog.insert(MapDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+		<!-- ============================= Progress Bar Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab6">
+		<form action="javascript:BarDialog.insert(BarDialog.local_ed)" method="get" accept-charset="utf-8">
+			<div>
+				<label for="info-progress">Progess (percentage)</label>
+				<input type="text" name="info-progress" value="50%" id="info-progress" />
+			</div>
+			<div>
+				<label for="progress-style">Style</label>
+				<select name="progress-style" id="progress-style" size="1">
+					<option value="warning" selected="selected">Orange</option>
+					<option value="danger">Red</option>
+					<option value="success">Green</option>
+					<option value="info">Blue</option>
+				</select>
+			</div>
+			<div>
+				<label for="button-last">Striped Style</label>
+				<input type="checkbox" name="button-text" value="yes" id="option-striped" />
+			</div>
+			<div>	
+				<a href="javascript:BarDialog.insert(BarDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+	<!-- ============================= Quote Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab7">
+		<form action="javascript:QuoteDialog.insert(QuoteDialog.local_ed)" method="get" accept-charset="utf-8">
+			<div>
+				<label for="quote-text">Text</label>
+				<input type="text" name="quote-text" value="" id="quote-text" />
+			</div>
+			<div>
+				<label for="quote-style">Alignment</label>
+				<select name="quote-style" id="quote-style" size="1">
+					<option value="left" selected="selected">Left</option>
+					<option value="right">Right</option>
+				</select>
+			</div>
+			<div>	
+				<a href="javascript:QuoteDialog.insert(QuoteDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+	<!-- ============================= Tabs Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab8">
+		<form action="/" method="get" accept-charset="utf-8">
+			<div>
+				<label for="button-size">Number of Tabs</label>
+				<select name="button-size" id="option-tabs" size="1">
+					<option value="span1" id="op1" selected="selected">One Tab</option>
+					<option value="span2" id="op2">Two Tabs</option>
+					<option value="span3" id="op3">Three Tabs</option>
+					<option value="span4" id="op4">Four Tabs</option>
+					<option value="span5" id="op5">Five Tabs</option>
+				</select>
+			</div>
+			<div>	
+				<a href="javascript:TabsDialog.insert(TabsDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+	<!-- ============================= Video Shortcode =============================  -->
+
+	<div id="button-dialog" class="dph-tab9">
+		<form action="javascript:VideoDialog.insert(VideoDialog.local_ed)" method="get" accept-charset="utf-8">
+			<div>
+				<label for="label-style">Player</label>
+				<select name="label-style" id="player-select" size="1">
+					<option id="youtube" value="youtube" selected="selected">YouTube</option>
+					<option id="vimeo" value="vimeo">Vimeo</option>
+				</select>
+			</div>
+			<div>
+				<label for="youtube-id">Video ID</label>
+				<input type="text" name="youtube-id" value="VideoID" id="youtube-id" />
+			</div>
+			<div>	
+				<a href="javascript:VideoDialog.insert(VideoDialog.local_ed)" id="insert-btn" style="display: block; line-height: 24px;">Insert</a>
+			</div>
+		</form>
+	</div>
+
+</div>
+</div>
+</body>
+</html>

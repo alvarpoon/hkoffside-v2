@@ -1,0 +1,84 @@
+/*! =============================================================================
+   Metabox CSS
+   ============================================================================= */
+.clearfix, .wave { *zoom: 1; }
+.clearfix:before, .clearfix:after, .wave:before, .wave:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after, .wave:after { clear: both; }
+
+#hidereview{
+  background:#f8f8f8;
+}
+
+#metabx-dph{
+  
+  overflow:hidden !important;
+}
+
+h3.review-title{
+	background:#eee;
+	border-bottom:1px solid #ddd;
+}
+
+.sec-rev{
+    float: left;
+    margin:10px 10px 0 10px;
+
+  }
+
+#hidereview .input-title{
+	width:280px;
+}
+
+#hidereview .criter{
+	width:200px;
+	float:left;
+	margin-left:10px;
+}
+
+
+#hidereview input{
+	margin:5px 0 10px;
+    background:#fff;
+    border:1px solid #ccc;
+    font-size: 13px;
+    color:#777;
+    display:block;
+    width:100px;
+    padding: 6px 4px !important;
+}
+
+#hidereview  .criter input{
+	width:150px;
+}
+
+#hidereview  .criter .input-sc{
+	width:100px;
+}
+
+
+#hidereview textarea{
+	margin:5px 0 10px;
+    background:#fff;
+    border:1px solid #ccc;
+    font-size: 13px;
+    color:#777;
+    display:block;
+    width:400px;
+    max-width:400px;
+    padding: 6px 4px !important;
+}
+
+ #hidereview label{
+    color:#888;
+    width:100%;
+    border-bottom:1px solid #fff;
+    font-size:13px;
+    text-transform:uppercase;
+    font-weight:normal;
+    display:inline-block;
+    text-align:left !important;
+  }
