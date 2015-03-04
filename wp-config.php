@@ -15,17 +15,24 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'hkoffside_v2');
+switch ($_SERVER['SERVER_NAME']) {
 
-/** MySQL database username */
-define('DB_USER', 'root');
+  case "local.hkoffside-v2.com":
+    define('DB_NAME', 'hkoffside_v2');
+    define( 'WP_SITEURL',  'http://local.hkoffside-v2.com' );
+    define( 'WP_HOME', 'http://local.hkoffside-v2.com' );
+    define( 'DB_USER',     'root' );
+    define( 'DB_PASSWORD', 'root' );
+    define( 'DB_HOST',     'localhost' );
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+  case "www.hkoffside.com":
+    define( 'DB_NAME',     'nowwhat_halodome' );
+    define( 'WP_SITEURL',  'http://halodome.nowwhat.hk' );
+    define( 'WP_HOME', 'http://halodome.nowwhat.hk' );
+    define( 'DB_USER',     'nowwhat' ); // replace with live server settings
+    define( 'DB_PASSWORD', '20273214' );
+    define( 'DB_HOST',     'localhost' );
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
