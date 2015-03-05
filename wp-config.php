@@ -26,11 +26,11 @@ switch ($_SERVER['SERVER_NAME']) {
     define( 'DB_HOST',     'localhost' );
 
   case "www.hkoffside.com":
-    define( 'DB_NAME',     'nowwhat_halodome' );
-    define( 'WP_SITEURL',  'http://halodome.nowwhat.hk' );
-    define( 'WP_HOME', 'http://halodome.nowwhat.hk' );
-    define( 'DB_USER',     'nowwhat' ); // replace with live server settings
-    define( 'DB_PASSWORD', '20273214' );
+    define( 'DB_NAME',     'hkoffside_v2' );
+    define( 'WP_SITEURL',  'http://www.hkoffside.com' );
+    define( 'WP_HOME', 'http://www.hkoffside.com' );
+    define( 'DB_USER',     'hkoffsideuser' ); // replace with live server settings
+    define( 'DB_PASSWORD', 'P@ssw0rd' );
     define( 'DB_HOST',     'localhost' );
 }
 
