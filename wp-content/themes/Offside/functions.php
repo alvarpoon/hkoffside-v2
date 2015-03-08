@@ -288,13 +288,13 @@ function wpe_excerpt($length_callback, $more_callback) {
 add_filter('wp_nav_menu_items', 'margot_home_link', 10, 2);
 function margot_home_link($items, $args) {
 	
-	/*if (is_home()) {
+	if (is_home()) {
 		$class = 'class="home-menu current current-menu-item"';
 	} else {
 		$class = 'class="home-menu"';
 	}
-	$homeMenuItem = "<li $class >" . $args->before . '<a href="' . home_url('/') . '" title="Home">' . $args->link_before . 'Home' . $args->link_after . '</a>' . $args->after . "</li>";
-	$items = $homeMenuItem . $items;*/
+	$homeMenuItem = "<li $class >" . $args->before . '<a href="' . home_url('/') . '" title="主頁">' . $args->link_before . '主頁' . $args->link_after . '</a>' . $args->after . "</li>";
+	$items = $homeMenuItem . $items;
 	return $items;
 }
 

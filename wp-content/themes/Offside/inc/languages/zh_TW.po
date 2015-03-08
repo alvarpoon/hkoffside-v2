@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Margot\n"
 "POT-Creation-Date: 2014-08-10 14:44-0600\n"
-"PO-Revision-Date: 2015-03-01 22:53+0800\n"
+"PO-Revision-Date: 2015-03-08 17:41+0800\n"
 "Last-Translator: \n"
 "Language-Team: Inibot <themes@inibot.com>\n"
 "Language: en_US\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: ../../archive.php:17
 #, php-format
 msgid "Category Archives: %s"
-msgstr ""
+msgstr "分類存檔：%s"
 
 #: ../../archive.php:19
 #, php-format
@@ -38,7 +38,7 @@ msgstr ""
 #: ../../archive.php:22 ../../author.php:23
 #, php-format
 msgid "Author Archives: %s"
-msgstr ""
+msgstr "作者存檔：%s"
 
 #: ../../archive.php:25
 #, php-format
@@ -61,15 +61,15 @@ msgstr ""
 
 #: ../../author.php:17 ../../content-single.php:44
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: ../../author.php:18
 msgid "has published"
-msgstr ""
+msgstr "已發布"
 
 #: ../../author.php:18
 msgid "posts"
-msgstr ""
+msgstr "文章"
 
 #: ../../comments.php:27 ../../comments.php:47
 msgid "Comment navigation"
@@ -101,15 +101,15 @@ msgstr ""
 
 #: ../../content-single.php:45
 msgid "view all posts"
-msgstr ""
+msgstr "查看所有文章"
 
 #: ../../content-single.php:54
 msgid "Comments"
-msgstr ""
+msgstr "評論"
 
 #: ../../content-single.php:55
 msgid "Join the Conversation"
-msgstr ""
+msgstr "參與討論"
 
 #: ../../functions.php:33 ../../options.php:234
 msgid "Logo Menu"
@@ -516,11 +516,11 @@ msgstr ""
 
 #: ../../inc/related-posts.php:26 .././related-posts.php:26
 msgid "Related Stories"
-msgstr ""
+msgstr "相關文章"
 
 #: ../../inc/related-posts.php:27 .././related-posts.php:27
 msgid "You May Like This"
-msgstr ""
+msgstr "您可能喜歡這些"
 
 #: ../../inc/template-tags.php:39 .././template-tags.php:39
 msgid "Tweet"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: ../../inc/template-tags.php:40 .././template-tags.php:40
 msgid "Share"
-msgstr ""
+msgstr "分享"
 
 #: ../../inc/template-tags.php:247 .././template-tags.php:247
 msgid "&larr; Older posts"
@@ -1137,7 +1137,7 @@ msgstr ""
 #: ../../search.php:16
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "搜索結果：%s"
 
 #: ../../searchform.php:11
 msgid "search"
